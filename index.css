@@ -1,0 +1,260 @@
+
+:root{
+    --black:black;
+    --white:white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+    width: 100vw;
+    height: 100vh;
+    background-image:url(./images/);
+}
+nav{
+    width: 100%;
+    height: 17%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 2rem;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#logo{
+    width: 20%;
+    height: 100%;
+    background-color: var(--black);
+    border-radius: 0px 50px 50px 0px;
+    position: absolute;
+    left:-1000px;
+    transition: 1s;
+}
+.home #nav-link{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    background-color: var(--black);
+    border-radius: 50px 0px 0px 50px;
+    position: absolute;
+    right:-1000px;
+    transition: 1s;
+
+}
+.home #nav-link li{
+    list-style-type:none ;
+}
+.home #nav-link li a{
+    color: var(--white);
+    text-decoration: none;
+    transition: 1s;
+    font-size: 1rem;
+}
+.home #nav-link li:hover a{
+    color: #70c7f3;
+    text-shadow: 0px 0px 40px #70c7f3,0px 0px 40px #70c7f3,0px 0px 40px #70c7f3,0px 0px 40px #70c7f3;
+transition: .4s;
+}
+
+#main{
+    position: relative;
+    top: 30%;
+    width: 100%;
+    height: 50%;
+}
+
+/* Css for contact icon style */
+.contect-container{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 5%;
+    background-color: var(--white);
+    border-radius: 100px 0px 0px 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    right:-1000px;
+    transition: 1s;
+
+}
+.fa-brands{
+    border-radius: 50%;
+    display: inline;
+}
+.fa-whatsapp:hover::after{
+    content: 'whats app';
+    color: white;
+    left: -80px;
+    top: 6px;
+    background-color: green;
+    transition: 1s;
+    font-size: .5rem;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.fa-facebook:hover::after{
+    content: "facebook";
+    color: white;
+    left: -70px;
+    top: 6px;
+    background-color: rgb(0, 6, 128);
+    transition: 1s;
+    font-size: .5rem;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.fa-instagram:hover::after{
+    content: 'instagram';
+    color: white;
+    left: -80px;
+    top: 6px;
+    background:linear-gradient(red,orange);
+    transition: 1s;
+    font-size: .5rem;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.fa-twitter:hover::after{
+    content: 'twitter';
+    color: white;
+    left: -70px;
+    top: 6px;
+    background-color: skyblue;
+    transition: 1s;
+    font-size: .5rem;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.fa-github:hover::after{
+    content: 'github';
+color: white;   
+ left: -60px;
+    top: 6px;
+    background-color: rgb(0, 0, 0);
+    transition: 1s;
+    font-size: .5rem;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.fa-linkedin:hover::after{
+    content: 'linkedin';
+    color: white;
+    left: -70px;
+    top: 6px;
+    background-color: blue;
+    transition: 1s;
+    font-size: .5rem;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 50px;}
+.icon span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    
+}
+.icon{
+    margin: 0 20px;
+    cursor: pointer;
+}
+.icon span i{
+    font-size: 25px;
+    list-style: 25px;
+}
+.icon .fa-brands{
+    position: relative;
+
+}
+.icon .fa-brands:hover{
+    transform: scale(1.1);
+}
+.icon span a{
+    color: black;
+}
+
+/* CSS for the slideshow */
+.slideshow-container{
+    position: absolute;
+    height: 100%;
+    width: 85%;
+    border-radius: 0px 100px 100px 0px;
+    overflow: hidden;
+    object-fit: cover;
+    left: -1000px;
+    transition: 1s;
+}
+
+
+.mySlides {
+    
+    display: block;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;
+    animation: slide 3s infinite linear;
+}
+
+
+.mySlides img{
+    width: 100%;
+    height: 100%;
+}
+
+#services-container{
+    
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    top: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#services-container h3{
+    color: black;
+    font-size: 3rem;
+}
+#services-container .services{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px 50px;
+    padding: 50px;
+
+}
+#services-container .services .service{
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#services-container .services .service .img{
+    width: 300px;
+    height: 200px;
+}
+#services-container .services .service .img img{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
