@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.products-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(178, 202, 224,.4);
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.products{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.products .product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products .product .img{
+    width: 100%;
+    height: 100px;
+}
+.products .prices{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products .prices .old_price{
+    text-decoration:line-through
+}
+.products .prices{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

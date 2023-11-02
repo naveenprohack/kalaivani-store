@@ -1,12 +1,16 @@
 
 :root{
-    --black:black;
+    --black:#333;
     --white:white;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+section{
+    width: 100vw;
+    height: 100vh;
 }
 .home{
     width: 100vw;
@@ -18,7 +22,7 @@ nav{
     height: 17%;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: sticky;
     top: 2rem;
     overflow: hidden;
     z-index: 2;
@@ -29,7 +33,7 @@ nav{
     height: 100%;
     background-color: var(--black);
     border-radius: 0px 50px 50px 0px;
-    position: absolute;
+    position: relative;
     left:-1000px;
     transition: 1s;
 }
@@ -41,7 +45,7 @@ nav{
     align-items: center;
     background-color: var(--black);
     border-radius: 50px 0px 0px 50px;
-    position: absolute;
+    position: relative;
     right:-1000px;
     transition: 1s;
 
@@ -62,10 +66,16 @@ transition: .4s;
 }
 
 #main{
-    position: relative;
-    top: 30%;
+    margin-top: 100px;
+    /* position: relative;
+    top: 30%; */
     width: 100%;
-    height: 50%;
+    height: 65%;
+}
+.main-in{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 /* Css for contact icon style */
@@ -209,8 +219,7 @@ color: white;
 
 
 .mySlides img{
-    width: 100%;
-    height: 100%;
+    object-fit: cover;
 }
 
 #services-container{
@@ -220,7 +229,6 @@ color: white;
     padding: 20px;
     display: flex;
     position: relative;
-    top: 300px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -231,30 +239,105 @@ color: white;
 }
 #services-container .services{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px 50px;
     padding: 50px;
 
 }
 #services-container .services .service{
     border-radius: 10px;
-    border: 2px solid black;
-    box-shadow: 0px 0px 5px black;
+    border: none    ;
+    box-shadow: 0px 0px 5px black,0px 0px 5px;
+    background-color: var(--black);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 #services-container .services .service .img{
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    transition: 1s;
 }
 #services-container .services .service .img img{
+
+    transition: 1s;
+}
+#services-container .services .service:hover .img img{
+ transform: scale(1.2);
+ overflow: hidden;
+ transition: 1s;
+}
+img{
     width: 100%;
     height: 100%;
 }
-footer{
-    background-color: black;
-    color: white;
-    width: 100%;
+#services-container .services .service .content{
+    color: var(--white);
+
 }
+#services-container .services .service .content h4{
+    margin: 10px;
+    font-size: 1.5em;
+    text-align: center;
+}
+#services-container .services .service .content p{
+    padding: 15px;
+    text-indent: 2rem;
+    font-size: 1em;
+}
+/* Add your CSS styling here */
+footer {
+    background-color:var(--black);
+    color: #fff;
+    padding: 20px 0;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.footer-container .footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-container .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-container .footer-section p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-container .footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container .footer-section li {
+    margin: 5px 0;
+}
+
+.footer-container .footer-section a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-container .footer-section a:hover {
+    text-decoration: underline;
+}
+footer .copyright{
+    text-align: center;
+}
+/* Add styling for social media icons, images, and other elements as needed */
