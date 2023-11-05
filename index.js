@@ -18,16 +18,16 @@ window.addEventListener('DOMContentLoaded',function(){
     
 })
 
-var contents = {
-    "Biometric":"fdsadamdff sdkfncf kfsad.,mf",
-    "PC Building":"fdsadamdff sdkfncf kfsad.,mf",
-    "Loptop service":"fdsadamdff sdkfncf kfsad.,mf",
-    "CCTV Camara":"fdsadamdff sdkfncf kfsad.,mf",
-    "Scanner":"fdsadamdff sdkfncf kfsad.,mf",
-    "tiger":"fdsadamdff sdkfncf kfsad.,mf",
-    "Mobile service":"fdsadamdff sdkfncf kfsad.,mf",
-    "agdasd":"fdsadamdff sdkfncf kfsad.,mf"
-}
+// var contents = {
+//     "Biometric":"fdsadamdff sdkfncf kfsad.,mf",
+//     "PC Building":"fdsadamdff sdkfncf kfsad.,mf",
+//     "Loptop service":"fdsadamdff sdkfncf kfsad.,mf",
+//     "CCTV Camara":"fdsadamdff sdkfncf kfsad.,mf",
+//     "Scanner":"fdsadamdff sdkfncf kfsad.,mf",
+//     "tiger":"fdsadamdff sdkfncf kfsad.,mf",
+//     "Mobile service":"fdsadamdff sdkfncf kfsad.,mf",
+//     "agdasd":"fdsadamdff sdkfncf kfsad.,mf"
+// }
 // JavaScript for automatic sliding window
 
 let slideIndex = 0;
@@ -37,13 +37,15 @@ function showSlides() {
     const slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+
     }
     slideIndex++;
     if (slideIndex > slides.length) {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); // Change image every 2 seconds (2000ms)
+
+    setTimeout(showSlides, 3000); // Change image every 2 seconds (2000ms)
 }
 
 function content(){

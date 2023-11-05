@@ -1,21 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 :root{
     --black:#333;
     --white:white;
 }
+
 *{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: rgba(178, 202, 224,.4);
+    height: 100%;
+}
 section{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+
 }
 .home{
     width: 100vw;
     height: 100vh;
-    background-image:url(./images/);
 }
 nav{
     width: 100%;
@@ -36,6 +43,68 @@ nav{
     position: relative;
     left:-1000px;
     transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+#logo .logo-name h2 {
+  color: #fff;
+  font-size: 2em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#logo .logo-name h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+#logo .logo-name h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+#logo img{
+    width: 4rem;
+    height: 4rem;
+}
+#logo h3{
+    font-size: 1rem;
+    color: red;
 }
 .home #nav-link{
     display: flex;
@@ -43,18 +112,18 @@ nav{
     width: 50%;
     height: 100%;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--white);
     border-radius: 50px 0px 0px 50px;
     position: relative;
     right:-1000px;
     transition: 1s;
-
+    
 }
 .home #nav-link li{
     list-style-type:none ;
 }
 .home #nav-link li a{
-    color: var(--white);
+    color: var(--black);
     text-decoration: none;
     transition: 1s;
     font-size: 1rem;
@@ -66,14 +135,13 @@ transition: .4s;
 }
 
 #main{
-<<<<<<< HEAD
+    height: 100%;
     margin-top: 100px;
     /* position: relative;
     top: 30%; */
-=======
     position: relative;
 /*top: 30%;*/
->>>>>>> 993c2b4d4f23c6608975cb03166b9175f0e3f974
+
     width: 100%;
     height: 65%;
 }
@@ -220,11 +288,13 @@ color: white;
     justify-content: center; /* Horizontally center */
     align-items: center;
     animation: slide 3s infinite linear;
+   
 }
 
 
 .mySlides img{
     object-fit: cover;
+    object-position: center;
 }
 
 #services-container{
@@ -237,14 +307,15 @@ color: white;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #services-container h3{
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 #services-container .services{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(4,1fr);
     gap: 10px 50px;
     padding: 50px;
 
@@ -252,7 +323,7 @@ color: white;
 #services-container .services .service{
     border-radius: 10px;
     border: none    ;
-    box-shadow: 0px 0px 5px black,0px 0px 5px;
+    box-shadow: 0px 0px 5px black,0px 0px 10px black;
     background-color: var(--black);
     display: flex;
     flex-direction: column;
@@ -278,7 +349,6 @@ img{
     width: 100%;
     height: 100%;
 }
-<<<<<<< HEAD
 #services-container .services .service .content{
     color: var(--white);
 
@@ -347,10 +417,19 @@ footer .copyright{
     text-align: center;
 }
 /* Add styling for social media icons, images, and other elements as needed */
-=======
 footer{
     background-color: black;
     color: white;
     width: 100%;
 }
->>>>>>> 993c2b4d4f23c6608975cb03166b9175f0e3f974
+@media only screen and (max-width:420px){
+    .home #nav-link li{
+        display: none;
+        background-color: #03a9f4;
+    }
+    
+    .home nav{
+        height: 50px;
+    }
+    
+}
