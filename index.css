@@ -38,7 +38,7 @@ nav{
 #logo{
     width: 20%;
     height: 100%;
-    background-color: var(--black);
+    background-color: var(--white);
     border-radius: 0px 50px 50px 0px;
     position: relative;
     left:-1000px;
@@ -310,8 +310,11 @@ color: white;
     flex-wrap: wrap;
 }
 #services-container h3{
-    color: black;
-    font-size: 2rem;
+    background: linear-gradient(rgb(71, 174, 222),rgb(31, 71, 183));
+    font-size: 4rem;
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #services-container .services{
     display: grid;
