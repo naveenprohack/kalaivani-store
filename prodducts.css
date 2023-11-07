@@ -208,7 +208,9 @@ transition: .4s;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.products:nth-child(1){
+    display:none;
+}
 #logo img{
     width: 4rem;
     height: 4rem;
