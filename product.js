@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded',function(){
       demo_product.querySelector("#product-image").src = product.URL;
     
       products_container.appendChild(demo_product);
-    
+      console.log(productTemplate.length);    
     })
     
 })
