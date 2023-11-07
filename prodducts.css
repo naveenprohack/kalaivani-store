@@ -208,7 +208,9 @@ transition: .4s;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.products-container .products .product:nth-child(1){
+    display: none;
+}
 #logo img{
     width: 4rem;
     height: 4rem;
@@ -245,14 +247,15 @@ transition: .4s;
     align-items: start;
 }
 .radio-boxs label{
+    display: inline-block;
    font-size: 1.5rem;
 }
-.radio-boxs .box input[type=radio] { 
+.radio-boxs input[type=radio] { 
     width:1.5rem; 
     height:1.5rem; 
     margin-right:10px ;
 } 
-.radio-boxs .box input[type=checkbox] { 
+.radio-boxs input[type=checkbox] { 
     width:1.5rem; 
     height:1.5rem; 
     margin-right:10px ;
@@ -264,8 +267,12 @@ transition: .4s;
     height: 100px;
     background-color: #03a9f4;
     border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    padding-right: 20px;
     right: -30px;
     bottom: -30px;
+    font-weight: bold;
 }
 .discount h3{
     margin-left: 13px;
