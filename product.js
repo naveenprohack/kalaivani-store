@@ -4,6 +4,10 @@ window.addEventListener('DOMContentLoaded',function(){
      var productTemplate = document.querySelector(".product");
     var products_container = document.querySelector(".products");
     var products_catogaries = document.querySelector(".product-catogaries");
+    var keyboard = document.getElementById("keyboard");
+    keyboard.addEventListener('click',function(){
+      
+    })
 
     nav_link.style.right = "0px";
     nav_link.style.transition = ".7s"
@@ -11,83 +15,80 @@ window.addEventListener('DOMContentLoaded',function(){
     logo.style.transition=".7s"
     products_catogaries.style.left = "0px";
     products_catogaries.style.transition=".7s"
+    products.forEach(product=>{
+      const demo_product = productTemplate.cloneNode(true);
+      demo_product.querySelector('#name').innerHTML = product.name;
+      console.log(product.name)
+      demo_product.querySelector('#description').innerHTML = product.description;
+      demo_product.querySelector('#old_price').innerHTMl = product.old;
+      demo_product.querySelector('#new_price').innerHTML = product.price;
+      demo_product.querySelector("#product-image").src = product.URL;
     
-//   products.forEach(product=>{
-//     const templateClone = productTemplate.cloneNode(true);
-//     document.querySelector('.name').textContent = product.name;
-//     document.querySelector('.description').textContent=product.description;
-//     document.querySelector('.old_price').textContent=product.old;
-//     document.querySelector('.new_price').textContent=product.price;
-//     products_container.appendChild(templateClone);
+      products_container.appendChild(demo_product);
     
-//   })
+    })
+    
 })
 
-// Function to populate the product list
-
-    // products.forEach(function(product) {
-    //     const product_list = document.createElement("div");
-    //     product_list.classList.add('product');
-    //     product_list.innerHTML = `
-        
-    //     <div class="img">
-    //         <img src="./images/dell_01.jpg" alt="">
-    //     </div>
-    //     <h2 class="name">${product.name}</h2>
-    //     <p class="description">${product.description}</p>
-    //        <div class="prices">
-    //          <span class="old_price">${product.old}</span><h3 class="new_price">${product.new}</h3>
-    //        </div>
-    //        <span class="discount"></span>
-    //        <button class="btn-fav">
-    //         <i class="fa fa-heart"></i>
-    //        </button>
-    
-    //     `;
-    //     products_container.appendChild(product_lis);
-    // });
-
-
 const products = [
-    {
-      name: "Mouses",
+    { id:1,
+      name: "Dell keyboard ",
       old:29.99,
       price: 19.99,
-      description: "This is the first product.",
+      description: "G20.",
       category: "Electronics",
-      inStock: true
+      inStock: true,     
+      URL:"./images/keyboard/dell_keyboard_01.jpg"
+
     },
-    {
+    { id:2,
       name: "Keyboard",
       old:29.99,
       price: 29.99,
       description: "This is the second product.",
       category: "Clothing",
-      inStock: false
+      inStock: false,
+      URL:"./images/keyboard/dell_keyboard_02.jpg"
+
     },
-    {
+    { id:3,
       name: "CPU",
       old:29.99,
       price: 9.99,
       description: "This is the third product.",
       category: "Home & Garden",
-      inStock: true
+      inStock: true,      
+      URL:"./images/keyboard/dell_keyboard_01.jpg"
+
     },
-    {
+    { id:4,
       name: "Monitor",
       old:29.99,
       price: 49.99,
       description: "This is the fourth product.",
       category: "Electronics",
-      inStock: true
+      inStock: true,      
+      URL:"./images/vk.png"
+
     },
-    {
+    { id:5,
       name: "Cable",
       old:29.99,
       price: 39.99,
       description: "This is the fifth product.",
       category: "Clothing",
-      inStock: true
+      inStock: true,
+      URL:"./images/vk.png"
+
+    },
+    { id:6,
+      name: "Cable",
+      old:29.99,
+      price: 39.99,
+      description: "This is the fifth product.",
+      category: "Clothing",
+      inStock: true,
+      URL:"./images/01.jpg"
     }
   ];
     const count = 0;
@@ -103,7 +104,6 @@ const products = [
       }
     })
   
-  // Accessing product details
- // Accessing the price of the second product
+
 
 
