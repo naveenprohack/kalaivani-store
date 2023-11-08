@@ -53,3 +53,50 @@ function content(){
         content.write = contents[i];
     }
 }
+const keyboard_products = [
+    { id:1,
+      name: "hardware repair ",
+      description:"lorem m..fd.m f.msadfm",
+      URL:"./images/keyboard/dell_keyboard_01.jpg"
+
+    },
+    { id:2,
+      name: "Keyboard",
+      old:29.99,
+      price: 29.99,
+      description: "This is the second product.",
+      category: "Clothing",
+      inStock: false,
+      URL:"./images/keyboard/dell_keyboard_02.jpg"
+
+    },
+    { id:3,
+      name: "CPU",
+      old:29.99,
+      price: 9.99,
+      description: "This is the third product.",
+      category: "Home & Garden",
+      inStock: true,      
+      URL:"./images/keyboard/dell_keyboard_01.jpg"
+
+    },
+    { id:4,
+      name: "Monitor",
+      old:29.99,
+      price: 49.99,
+      description: "This is the fourth product.",
+      category: "Electronics",
+      inStock: true,      
+      URL:"./images/vk.png"
+
+    },
+    { id:5,
+      name: "Cable",
+      old:29.99,
+      price: 39.99,
+      description: "This is the fifth product.",
+      category: "Clothing",
+      inStock: true,
+      URL:"./images/vk.png"
+
+    }];

@@ -11,7 +11,9 @@ window.addEventListener('DOMContentLoaded',function(){
     logo.style.left = "0px";
     logo.style.transition=".7s"
     products_catogaries.style.left = "0px";
-    products_catogaries.style.transition=".7s"
+    products_catogaries.style.transition=".7s";
+    products_container.style.right = "0px";
+    products_container.style.transition = ".7s";
     products.forEach(product=>{
       const demo_product = productTemplate.cloneNode(true);
       demo_product.querySelector('#name').innerHTML = product.name;
@@ -22,7 +24,6 @@ window.addEventListener('DOMContentLoaded',function(){
       demo_product.querySelector("#product-image").src = product.URL;
     
       products_container.appendChild(demo_product);
-      console.log(productTemplate.length);    
     })
 })
 const products = [
@@ -128,80 +129,4 @@ const products = [
 
     }
   ];
-  const keyboard_products = [
-    { id:1,
-      name: "Dell keyboard ",
-      old:29.99,
-      price: 19.99,
-      description: "G20.",
-      category: "Electronics",
-      inStock: true,     
-      URL:"./images/keyboard/dell_keyboard_01.jpg"
-
-    },
-    { id:2,
-      name: "Keyboard",
-      old:29.99,
-      price: 29.99,
-      description: "This is the second product.",
-      category: "Clothing",
-      inStock: false,
-      URL:"./images/keyboard/dell_keyboard_02.jpg"
-
-    },
-    { id:3,
-      name: "CPU",
-      old:29.99,
-      price: 9.99,
-      description: "This is the third product.",
-      category: "Home & Garden",
-      inStock: true,      
-      URL:"./images/keyboard/dell_keyboard_01.jpg"
-
-    },
-    { id:4,
-      name: "Monitor",
-      old:29.99,
-      price: 49.99,
-      description: "This is the fourth product.",
-      category: "Electronics",
-      inStock: true,      
-      URL:"./images/vk.png"
-
-    },
-    { id:5,
-      name: "Cable",
-      old:29.99,
-      price: 39.99,
-      description: "This is the fifth product.",
-      category: "Clothing",
-      inStock: true,
-      URL:"./images/vk.png"
-
-    },
-    { id:6,
-      name: "Cable",
-      old:29.99,
-      price: 39.99,
-      description: "This is the sixth product.",
-      category: "Clothing",
-      inStock: true,
-      URL:"./images/01.jpg"
-    }
-  ];
-    const count = 0;
-    var heart = document.querySelector('.btn-fav');
-    heart.addEventListener('click',()=>{
-      if(heart.style.color != "skyblue"){
-      heart.style.color = "skyblue";
-      count++;
-      }
-      else{
-        heart.style.color = "white";
-        count--;
-      }
-    })
   
-
-
-
