@@ -182,14 +182,35 @@ transition: .4s;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+    background: linear-gradient(rgb(71, 174, 222),rgb(31, 71, 183));
+    font-size: 4rem;
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .container .main .text-part p{
     text-indent: 40px;
     font-size: 1.2em;
+    color: var(--white);
 }
 .container .main .text-part button{
     width: 80px;
     height: 30px;
     padding: 5px;
     margin-top: 10px;
+  
+    background-color: #5c91dc;
+    color:white;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    transition:1s;
+
+}
+.container .main .text-part button:hover{
+  transform: scale(1.1);
+  background-color: white;
+  color: skyblue;
+  transition: background-color color 1s;
+
 }

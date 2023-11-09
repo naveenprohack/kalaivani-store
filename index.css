@@ -13,13 +13,9 @@
 }
 body{
     background-color: rgba(178, 202, 224,.4);
-    height: 100%;
+    height: auto;
 }
-section{
-    width: 100vw;
-    height: 100%;
 
-}
 .home{
     width: 100vw;
     height: 100vh;
@@ -47,8 +43,9 @@ nav{
     align-items: center;
     justify-content: center;
     font-family: "Poppins", sans-serif;
-
+    
 }
+
 
 
 #logo .logo-name h2 {
@@ -454,17 +451,7 @@ footer{
     color: white;
     width: 100%;
 }
-@media only screen and (max-width:420px){
-    .home #nav-link li{
-        display: none;
-        background-color: #03a9f4;
-    }
-    
-    .home nav{
-        height: 50px;
-    }
-    
-}
+
 
 
 
@@ -485,4 +472,28 @@ footer{
   78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
   80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
   100% { transform: scale(1)   translate(10px, -30px); }
+}
+@media only screen and (max-width:420px){
+    
+    .home {
+        height: 80vh;
+    }
+    nav{
+        height: 14%;
+    }
+    nav #nav-link{
+        width: 10%;
+    }
+    #burder{
+        display: block;
+    }
+    nav #logo .logo-name h2{
+        font-size: 1.4em;
+    }
+    nav #logo{
+        width: 30%;
+    }
+    #nav-link li{
+        display: none;
+    }
 }
