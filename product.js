@@ -11,9 +11,9 @@ window.addEventListener('DOMContentLoaded',function(){
     logo.style.left = "0px";
     logo.style.transition=".7s"
     products_catogaries.style.left = "0px";
-    products_catogaries.style.transition=".7s";
+    products_catogaries.style.transition="2s";
     products_container.style.right = "0px";
-    products_container.style.transition = ".7s";
+    products_container.style.transition = "2s";
     products.forEach(product=>{
       const demo_product = productTemplate.cloneNode(true);
       demo_product.querySelector('#name').innerHTML = product.name;
@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded',function(){
       products_container.appendChild(demo_product);
     })
 })
+
 const products = [
     { id:1,
       name: "Dell keyboard ",
@@ -130,3 +131,4 @@ const products = [
     }
   ];
   
+

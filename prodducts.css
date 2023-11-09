@@ -240,7 +240,7 @@ transition: .4s;
 .product-catogaries{
     padding: 0px 20px;
     position: relative;
-    left: -100px;
+    left: -1000px;
 }
 .radio-boxs{
     display: flex;

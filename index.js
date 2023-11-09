@@ -4,30 +4,75 @@ window.addEventListener('DOMContentLoaded',function(){
     fa_brands = document.querySelectorAll('.fa-brands');
     var slideContainer = document.querySelector(".slideshow-container");
     var contactContainer = document.querySelector(".contect-container");
-    var content = document.querySelectorAll(".services .service .content h4");
+    var service_container = this.document.querySelector(".services");
+    var serviceTemplate = this.document.querySelector(".service");
     console.log(content.length);
     contactContainer.style.right = "0px";
     contactContainer.style.transition = "0.7s";
     slideContainer.style.left = "0px";
-    slideContainer.style.transition = ".7s"
+    slideContainer.style.transition = ".7s";
     nav_link.style.right = "0px";
-    nav_link.style.transition = ".7s"
+    nav_link.style.transition = ".7s";
     logo.style.left = "0px";
-    logo.style.transition=".7s"
-    showSlides();
+    logo.style.transition="1.5s";
     
+    showSlides();
+    services.forEach(service=>{
+        const service_clone = serviceTemplate.cloneNode(true);
+        service_clone.querySelector('.heading').innerHTML = service.name;
+        service_clone.querySelector('#service-img').src = service.url;
+        service_clone.querySelector('.dis').innerHTML = service.dis;
+        console.log(service_clone);
+        service_container.appendChild(service_clone);
+    })
 })
 
-// var contents = {
-//     "Biometric":"fdsadamdff sdkfncf kfsad.,mf",
-//     "PC Building":"fdsadamdff sdkfncf kfsad.,mf",
-//     "Loptop service":"fdsadamdff sdkfncf kfsad.,mf",
-//     "CCTV Camara":"fdsadamdff sdkfncf kfsad.,mf",
-//     "Scanner":"fdsadamdff sdkfncf kfsad.,mf",
-//     "tiger":"fdsadamdff sdkfncf kfsad.,mf",
-//     "Mobile service":"fdsadamdff sdkfncf kfsad.,mf",
-//     "agdasd":"fdsadamdff sdkfncf kfsad.,mf"
-// }
+const services = [
+  {
+    id:1,
+    name:'Hardware repair',
+    url:"./images/vk.png",
+    dis:'jkasf ndlsf. dflm,.d'
+  },
+  {
+    id:2,
+    name:'Software development',
+    url:"./images/networking.jpg",
+    dis:'jkasf ndlsf. dflm,.d'
+
+  },
+  {
+    id:3,
+    name:'PC Building',
+    url:"./images/system.jpg",
+    dis:'Computer hardware'
+
+  },
+  {
+    id:4,
+    name:'CCTV camara Fixing',
+    url:"./images/cctv.jpg",
+    dis:'jkasf ndlsf. dflm,.d'
+
+  },
+  {
+    id:5,
+    name:'Electronic Product',
+    url:"./images/sale.png",
+    dis:'jkasf ndlsf. dflm,.d'
+
+  },
+  {
+    id:6,
+    name:'Bio Metric Fixing',
+    url:"./images/biometric_avator.jpg",
+    dis:'jkasf ndlsf. dflm,.d'
+
+  }
+
+
+
+];
 // JavaScript for automatic sliding window
 
 let slideIndex = 0;
@@ -57,7 +102,7 @@ const keyboard_products = [
     { id:1,
       name: "hardware repair ",
       description:"lorem m..fd.m f.msadfm",
-      URL:"./images/keyboard/dell_keyboard_01.jpg"
+      url:"./images/keyboard/dell_keyboard_01.jpg"
 
     },
     { id:2,
@@ -67,7 +112,7 @@ const keyboard_products = [
       description: "This is the second product.",
       category: "Clothing",
       inStock: false,
-      URL:"./images/keyboard/dell_keyboard_02.jpg"
+      url:"./images/keyboard/dell_keyboard_02.jpg"
 
     },
     { id:3,
@@ -77,7 +122,7 @@ const keyboard_products = [
       description: "This is the third product.",
       category: "Home & Garden",
       inStock: true,      
-      URL:"./images/keyboard/dell_keyboard_01.jpg"
+      url:"./images/keyboard/dell_keyboard_01.jpg"
 
     },
     { id:4,
@@ -87,7 +132,7 @@ const keyboard_products = [
       description: "This is the fourth product.",
       category: "Electronics",
       inStock: true,      
-      URL:"./images/vk.png"
+      url:"./images/vk.png"
 
     },
     { id:5,
@@ -97,6 +142,6 @@ const keyboard_products = [
       description: "This is the fifth product.",
       category: "Clothing",
       inStock: true,
-      URL:"./images/vk.png"
+      url:"./images/vk.png"
 
     }];
