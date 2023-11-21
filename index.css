@@ -132,26 +132,22 @@ transition: .4s;
 }
 
 #main{
-    height: 100%;
     margin-top: 100px;
-    /* position: relative;
-    top: 30%; */
-    position: relative;
-/*top: 30%;*/
-
+    
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 65%;
 }
-.main-in{
+/* .main-in{
     position: relative;
     width: 100%;
     height: 100%;
-}
+} */
 
 /* Css for contact icon style */
 .contect-container{
-    position: absolute;
-    right: 0px;
+    position: relative;
     height: 100%;
     width: 5%;
     background-color: var(--white);
@@ -267,7 +263,7 @@ color: white;
 
 /* CSS for the slideshow */
 .slideshow-container{
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 85%;
     border-radius: 0px 100px 100px 0px;
@@ -275,6 +271,7 @@ color: white;
     object-fit: cover;
     left: -1000px;
     transition: 1s;
+    background-color: var(--white);
 }
 
 
@@ -290,7 +287,7 @@ color: white;
 
 
 .mySlides img{
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -351,12 +348,13 @@ color: white;
 #services-container .services .service:nth-child(even){
     border-radius: 0px 100px 100px 0px;
     flex-direction: row;
-    
+    margin-right: 10%;
 }
 #services-container .services .service:nth-child(odd){
     border-radius: 100px 0px 0px 100px;
     flex-direction: row-reverse;
-   
+    margin-left: 10%;
+
 }
 #services-container .services .service .img{
     width: 30%;
@@ -473,27 +471,86 @@ footer{
   80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
   100% { transform: scale(1)   translate(10px, -30px); }
 }
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: black;
+}
+#nav-link #burger{
+    display: none;
+}
 @media only screen and (max-width:420px){
     
     .home {
-        height: 80vh;
+        height: 70vh;
+    }
+    .home nav #nav-link{
+        width: 20%;
     }
     nav{
         height: 14%;
     }
-    nav #nav-link{
-        width: 10%;
-    }
-    #burder{
+   
+    #nav-link #burger{
         display: block;
     }
     nav #logo .logo-name h2{
         font-size: 1.4em;
     }
     nav #logo{
-        width: 30%;
+        width: 20%;
     }
     #nav-link li{
         display: none;
+    }
+    #main{
+        height: 50%;
+    }
+    .contect-container{
+        width: 10%;
+    }
+    .slideshow-container{
+        width: 80%;
+    }
+    #logo .logo-name h2{
+        font-size: .4em;
+    }
+    .ad-promo{
+        display: none;
+    }
+    #id{
+        display: none;
+    }
+    #services-container .services{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+    }
+    #services-container .services .service{
+        border-radius: 0px 100px 100px 0px;
+        margin: 10px 0px;
+        width: auto;
+    }
+    #services-container .services .service .content .heading{
+        font-size: 1rem;
+    }
+    #services-container .services .service .content .heading .dis{
+        font-size: .5rem;
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+    .icon span i{
+        font-size: 10px;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .home nav #logo{
+        width: 50%;
     }
 }

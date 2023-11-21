@@ -26,7 +26,10 @@ window.addEventListener('DOMContentLoaded',function(){
         service_container.appendChild(service_clone);
     })
 })
-
+var menu = this.document.getElementById('burger');
+menu.addEventListener('click',()=>{
+  nav_link.style.display = "block";
+})
 const services = [
   {
     id:1,
@@ -145,3 +148,4 @@ const keyboard_products = [
       url:"./images/vk.png"
 
     }];
+    
