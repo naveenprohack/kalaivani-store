@@ -26,7 +26,17 @@ window.addEventListener('DOMContentLoaded',function(){
       products_container.appendChild(demo_product);
     })
 })
-
+function PopUp(){
+      var popup = this.document.getElementById("mview-nav-link");
+      if(popup.style.display === "block"){
+        popup.style.display = "none"
+        popup.style.transition = "2s"
+      }
+      else{
+        popup.style.display = "block"
+      
+      }
+    }
 const products = [
     { id:1,
       name: "Dell keyboard ",

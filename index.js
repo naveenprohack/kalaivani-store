@@ -6,8 +6,7 @@ window.addEventListener('DOMContentLoaded',function(){
     var contactContainer = document.querySelector(".contect-container");
     var service_container = this.document.querySelector(".services");
     var serviceTemplate = this.document.querySelector(".service");
-    
-    console.log(content.length);
+  
     contactContainer.style.right = "0px";
     contactContainer.style.transition = "0.7s";
     slideContainer.style.left = "0px";
@@ -27,10 +26,7 @@ window.addEventListener('DOMContentLoaded',function(){
         service_container.appendChild(service_clone);
     })
 })
-var menu = this.document.getElementById('burger');
-menu.addEventListener('click',()=>{
-  nav_link.style.display = "block";
-})
+
 const services = [
   {
     id:1,

@@ -46,8 +46,6 @@ nav{
     
 }
 
-
-
 #logo .logo-name h2 {
   color: #fff;
   font-size: 2em;
@@ -64,7 +62,14 @@ nav{
   color: #03a9f4;
   animation: animate 4s ease-in-out infinite;
 }
-
+#logo img{
+    width: 4rem;
+    height: 4rem;
+}
+#logo h3{
+    font-size: 1rem;
+    color: red;
+}
 @keyframes animate {
   0%,
   100% {
@@ -95,14 +100,7 @@ nav{
     );
   }
 }
-#logo img{
-    width: 4rem;
-    height: 4rem;
-}
-#logo h3{
-    font-size: 1rem;
-    color: red;
-}
+
 .home #nav-link{
     display: flex;
     justify-content: space-evenly;
@@ -498,7 +496,7 @@ footer{
     line-height: 30px;
 }
 #mview-nav-link li a{
-    color: var(--white);
+    color: var(white);
     text-decoration: none;
     transition: 1s;
     font-size: 1rem;
@@ -518,6 +516,7 @@ transition: .4s;
 #nav-link #burger{
     display: none;
     color: #70c7f3;
+    font-size: 1.5rem;
 }
 @media only screen and (max-width:420px){
     
@@ -528,12 +527,9 @@ transition: .4s;
         width: 20%;
     }
     nav{
-        height: 14%;
+        height: 80px;
     }
    
-    #nav-link #burger{
-        display: block;
-    }
     nav #logo .logo-name h2{
         font-size: 1.4em;
     }
@@ -597,5 +593,7 @@ transition: .4s;
     #services-container{
         margin-top: .5rem;
     }
-   
+    .home nav #nav-link #burger{
+    display: block;
+   }
 }
