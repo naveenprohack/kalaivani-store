@@ -475,7 +475,8 @@ footer{
     position: absolute;
     display: none;
     width: 100%;
-    height: 200px;
+    height: 180px;
+    padding-top: 10px;
     background: rgba(71, 69, 69, 0.3);
     z-index: 2;
     margin-top: 50px;
@@ -593,7 +594,7 @@ transition: .4s;
     #main{
       margin-top: 70px;  
     }
-    #services-containe{
+    #services-container{
         margin-top: .5rem;
     }
    
