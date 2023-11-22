@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded',function(){
     var contactContainer = document.querySelector(".contect-container");
     var service_container = this.document.querySelector(".services");
     var serviceTemplate = this.document.querySelector(".service");
+    
     console.log(content.length);
     contactContainer.style.right = "0px";
     contactContainer.style.transition = "0.7s";
@@ -148,4 +149,16 @@ const keyboard_products = [
       url:"./images/vk.png"
 
     }];
+    
+    function PopUp(){
+      var popup = this.document.getElementById("mview-nav-link");
+      if(popup.style.display === "block"){
+        popup.style.display = "none"
+        popup.style.transition = "2s"
+      }
+      else{
+        popup.style.display = "block"
+      
+      }
+    }
     
